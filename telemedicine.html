@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicine | AyurJeev</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="telemedicine.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Custom message box for user feedback -->
+    <div id="custom-message-box"></div>
+
+    <header>
+        <div class="container">
+            <h1>Telemedicine Services</h1>
+            <p>Connect with healthcare professionals from anywhere</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-left">
+                <div class="nav-brand">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>AyurJeev</h3>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="symptom-navigator.html">Symptom Navigator</a></li>
+                <li><a href="telemedicine.html" class="active">Telemedicine</a></li>
+                <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                <li><a href="image-identifier.html">Image Identifier</a></li>
+                <li><a href="health-education.html">Health Education</a></li>
+            </ul>
+            <div class="nav-right">
+                <!-- Login Link (shown if NOT logged in) -->
+                <a href="login_signin.html" class="btn btn-primary" id="nav-login-link" style="display: none;">Login / Signup</a>
+                
+                <!-- Profile Icon Button (shown IF logged in) -->
+                <button id="nav-profile-button" class="profile-button" style="display: none;">
+                    <span class="profile-initial">P</span>
+                    <i class="fas fa-user-circle"></i>
+                </button>
+                <!-- Logout button is now ONLY on profile.html -->
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="telemedicine-card">
+            <h2><i class="fas fa-video"></i> Virtual Consultation</h2>
+            <p>Generate a secure meeting link to connect with a doctor or healthcare assistant.</p>
+
+            <!-- Login/Signup Prompt - This section is conceptually removed but keeping its ID for JS check -->
+            <!-- The display will be handled by telemedicine.js checking isLoggedIn -->
+            <div id="telemedicineAuthPrompt" style="display:none;" class="login-prompt">
+                <h3>Access Telemedicine Features</h3>
+                <p>Please log in or sign up to use our virtual consultation services.</p>
+                <div class="auth-buttons">
+                    <a href="login_signin.html?action=login" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="login_signin.html?action=signup" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Sign Up</a>
+                </div>
+            </div>
+
+            <!-- Telemedicine Service Content -->
+            <div id="telemedicineService" style="display:none;">
+                <button id="generateLinkBtn" class="btn btn-primary"><i class="fas fa-link"></i> Generate Meeting Link</button>
+
+                <div id="meetingLinkDisplay" style="display:none; margin-top: 20px;">
+                    <p>Your meeting link:</p>
+                    <a href="#" id="meetingLink" target="_blank" class="btn btn-secondary"></a>
+                    <button id="copyLinkBtn" class="btn btn-secondary" style="margin-left: 10px;"><i class="fas fa-copy"></i> Copy Link</button>
+                </div>
+
+                <div class="telemedicine-info">
+                    <h3>How it Works:</h3>
+                    <ul>
+                        <li><i class="fas fa-user-check"></i> Ensure you are logged in to access this service.</li>
+                        <li><i class="fas fa-link"></i> Click "Generate Meeting Link" to create a unique virtual consultation room.</li>
+                        <li><i class="fas fa-share-alt"></i> Share this link with your healthcare provider or patient.</li>
+                        <li><i class="fas fa-calendar-alt"></i> Schedule your virtual appointment at a mutually convenient time.</li>
+                        <li><i class="fas fa-comments"></i> Use the link to join the video call at the scheduled time.</li>
+                    </ul>
+                </div>
+
+                <div class="important-note">
+                    <h4><i class="fas fa-info-circle"></i> Important Note</h4>
+                    <p>AyurJeev provides the platform for virtual consultations. The quality of the consultation depends on your internet connectivity and the availability of healthcare professionals.</p>
+                    <p>Always ensure your environment is private and quiet for a confidential discussion.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>AyurJeev</h3>
+                    </div>
+                    <p>Empowering rural health through AI-powered solutions. Bridging the gap between technology and healthcare accessibility.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="telemedicine.html">Telemedicine</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="image-identifier.html">Image Identifier</a></li>
+                        <li><a href="health-education.html">Health Education</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">AI Diagnosis</a></li>
+                        <li><a href="#">Remote Consultation</a></li>
+                        <li><a href="#">Health Monitoring</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                        <li><a href="#">Preventive Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 123 456 7890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@ayurjeev.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rural Healthcare Hub, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="disclaimer">
+                    <p><strong>Important Disclaimer:</strong> AyurJeev provides information and suggestions based on AI analysis. It is not a substitute for professional medical diagnosis, treatment, or advice from a qualified healthcare provider. Always consult healthcare professionals for medical concerns.</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 AyurJeev. All rights reserved. | Empowering rural health through technology.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="auth.js"></script> 
+    <script src="telemedicine.js"></script> 
+    <script src="home.js"></script> <!-- Ensure home.js (or any other common scripts) is also loaded if needed for nav toggle etc. -->
+    <script>
+        // Attach event listener for the profile button in the nav bar
+        document.addEventListener('DOMContentLoaded', () => {
+            const profileButton = document.getElementById('nav-profile-button');
+            if (profileButton) {
+                profileButton.addEventListener('click', () => {
+                    if (window.isLoggedIn()) {
+                        window.location.href = 'profile.html';
+                    } else {
+                        window.showCustomMessage("Please log in to view your profile.", 'info');
+                    }
+                });
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_1a225f55596f5b34b5f1fbd49d61f5ff3'
+    });
+</script>
+</body>
+</html>

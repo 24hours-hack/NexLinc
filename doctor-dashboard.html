@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard | AyurJeev</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="doctor-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Doctor Dashboard</h1>
+            <p>View and manage patient symptom reports</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <!-- Same navigation as other pages -->
+    </nav>
+
+    <main class="container">
+        <section id="doctor-dashboard">
+            <div class="dashboard-header">
+                <h2>Patient Reports</h2>
+                <div class="search-filter">
+                    <input type="text" placeholder="Search patients...">
+                    <select>
+                        <option>All Specialties</option>
+                        <option>General Physician</option>
+                        <option>Cardiologist</option>
+                        <option>Neurologist</option>
+                        <!-- Add more specialties as needed -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="reports-list">
+                <div class="report-card">
+                    <div class="report-header">
+                        <h3>Patient ID: P1001</h3>
+                        <span class="report-date">2025-06-10</span>
+                    </div>
+                    <div class="report-summary">
+                        <p><strong>Body Part:</strong> Chest</p>
+                        <p><strong>Recommended Specialist:</strong> Cardiologist</p>
+                        <p><strong>Suggested Tests:</strong> ECG, Cardiac Enzymes</p>
+                    </div>
+                    <div class="report-actions">
+                        <button class="btn btn-primary">View Full Report</button>
+                        <button class="btn btn-secondary">Add Notes</button>
+                    </div>
+                </div>
+
+                <!-- More report cards would be dynamically generated -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Same footer as other pages -->
+    </footer>
+
+    <script src="doctor-dashboard.js"></script>
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_1a225f55596f5b34b5f1fbd49d61f5ff3'
+    });
+</script>
+</body>
+</html>

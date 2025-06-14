@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Navigator | AyurJeev</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="symptom-navigator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Smart Symptom Navigator</h1>
+            <p>Select a body part and answer simple questions to get personalized recommendations</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-left">
+                    </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="symptom-navigator.html" class="active">Symptom Navigator</a></li>
+                <li><a href="telemedicine.html">Telemedicine</a></li>
+                <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                <li><a href="image-identifier.html">Image Identifier</a></li>
+                <li><a href="health-education.html">Health Education</a></li>
+            </ul>
+            <div class="nav-right">
+                </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="symptom-navigator-content">
+            <div class="disclaimer-card">
+                <h2><i class="fas fa-exclamation-circle"></i> Important Health Disclaimer</h2>
+                <p>This tool provides suggestions based on your symptoms but is not a medical diagnosis. Always consult a healthcare professional for medical concerns.</p>
+            </div>
+
+            <div class="navigator-container">
+  <div class="body-diagram-section">
+    <h2>Select a Body Part</h2>
+    <div class="human-body">
+      <img src="human-body.png" alt="Human Body Diagram" usemap="#bodyMap">
+
+      <map name="bodyMap">
+        <!-- Head -->
+        <area shape="rect" coords="185,10,235,60" alt="Head" data-part="head">
+
+        <!-- Neck -->
+        <area shape="rect" coords="195,60,225,80" alt="Neck" data-part="neck">
+
+        <!-- Chest -->
+        <area shape="rect" coords="170,80,250,140" alt="Chest" data-part="chest">
+
+        <!-- Abdomen -->
+        <area shape="rect" coords="170,140,250,200" alt="Abdomen" data-part="abdomen">
+
+        <!-- Pelvis -->
+        <area shape="rect" coords="170,200,250,240" alt="Pelvis" data-part="pelvis">
+
+        <!-- Left Arm -->
+        <area shape="rect" coords="120,80,170,200" alt="Left Arm" data-part="left-arm">
+
+        <!-- Right Arm -->
+        <area shape="rect" coords="250,80,300,200" alt="Right Arm" data-part="right-arm">
+
+        <!-- Left Hand -->
+        <area shape="rect" coords="110,200,150,250" alt="Left Hand" data-part="left-hand">
+
+        <!-- Right Hand -->
+        <area shape="rect" coords="270,200,310,250" alt="Right Hand" data-part="right-hand">
+
+        <!-- Left Leg -->
+        <area shape="rect" coords="170,240,210,400" alt="Left Leg" data-part="left-leg">
+
+        <!-- Right Leg -->
+        <area shape="rect" coords="210,240,250,400" alt="Right Leg" data-part="right-leg">
+
+        <!-- Left Foot -->
+        <area shape="rect" coords="170,400,200,440" alt="Left Foot" data-part="left-foot">
+
+        <!-- Right Foot -->
+        <area shape="rect" coords="220,400,250,440" alt="Right Foot" data-part="right-foot">
+      </map>
+    </div>
+  </div>
+</div>
+
+
+                <div id="questionnaire-section" class="questionnaire-section" style="display: none;">
+                    <h2 id="selected-part-title">Questions About Your <span id="selected-part"></span></h2>
+                    <div id="question-container" class="question-container"></div>
+                    <button id="submit-answers" class="btn btn-primary" style="display: none;">Get Recommendations</button>
+                </div>
+
+                <div id="results-section" class="results-section" style="display: none;">
+                    <h2>Your Recommendations</h2>
+                    <div class="recommendation-card">
+                        <h3><i class="fas fa-user-md"></i> Recommended Specialist</h3>
+                        <p id="specialist-recommendation"></p>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3><i class="fas fa-flask"></i> Suggested Tests</h3>
+                        <p id="tests-recommendation"></p>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Action Guidance</h3>
+                        <p id="action-recommendation"></p>
+                    </div>
+                    <button id="generate-report" class="btn btn-primary">Generate Doctor's Report</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>AyurJeev</h3>
+                    </div>
+                    <p>Empowering rural health through AI-powered solutions. Bridging the gap between technology and healthcare accessibility.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="telemedicine.html">Telemedicine</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="image-identifier.html">Image Identifier</a></li>
+                        <li><a href="health-education.html">Health Education</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">AI Diagnosis</a></li>
+                        <li><a href="#">Remote Consultation</a></li>
+                        <li><a href="#">Health Monitoring</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                        <li><a href="#">Preventive Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 123 456 7890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@ayurjeev.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rural Healthcare Hub, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="disclaimer">
+                    <p><strong>Important Disclaimer:</strong> AyurJeev provides information and suggestions based on AI analysis. It is not a substitute for professional medical diagnosis, treatment, or advice from a qualified healthcare provider. Always consult healthcare professionals for medical concerns.</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 AyurJeev. All rights reserved. | Empowering rural health through technology.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="symptom-navigator.js"></script>
+    <script src="home.js"></script>
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_1a225f55596f5b34b5f1fbd49d61f5ff3'
+    });
+</script>
+</body>
+</html>

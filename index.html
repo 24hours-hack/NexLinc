@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup | AyurJeev</title>
+    <link rel="stylesheet" href="styles.css"> 
+    
+    <link rel="stylesheet" href="login_signin.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Custom message box element -->
+    <div id="custom-message-box"></div>
+
+    <header>
+        <div class="container">
+            <h1>Welcome Back!</h1>
+            <p>Access your personalized health tools</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-left">
+                <div class="nav-brand">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>AyurJeev</h3>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <!-- Navigation links removed from login/signup to enforce direct auth -->
+                <!-- Will be dynamically updated or redirected after login -->
+            </ul>
+            <div class="nav-right">
+                <!-- Optional: Auth status can be displayed here, but typically not on login page -->
+                <span id="auth-status" style="color: #555; margin-right: 15px;"></span>
+                <!-- Login/Logout buttons dynamically shown by auth.js on other pages -->
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="auth-section">
+            <div class="auth-card">
+                <div class="auth-tabs">
+                    <button class="tab-button active" id="loginTab">Login</button>
+                    <button class="tab-button" id="signupTab">Signup</button>
+                </div>
+
+                <div id="loginForm" class="auth-form active">
+                    <h2><i class="fas fa-sign-in-alt"></i> Login to Your Account</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Email:</label>
+                            <input type="email" id="loginEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password:</label>
+                            <input type="password" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+
+                <div id="signupForm" class="auth-form">
+                    <h2><i class="fas fa-user-plus"></i> Create New Account</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="signupUsername">Full Name:</label>
+                            <input type="text" id="signupUsername" placeholder="e.g., John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email:</label>
+                            <input type="email" id="signupEmail" placeholder="e.g., user@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupMobile">Mobile Number:</label>
+                            <input type="tel" id="signupMobile" pattern="[0-9]{10}" placeholder="e.g., 9876543210 (10 digits)" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupDob">Date of Birth:</label>
+                            <input type="date" id="signupDob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupAge">Age:</label>
+                            <input type="number" id="signupAge" min="1" max="120" placeholder="e.g., 30" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupHeight">Height (cm):</label>
+                            <input type="number" id="signupHeight" min="50" max="250" placeholder="e.g., 175" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupWeight">Weight (kg):</label>
+                            <input type="number" id="signupWeight" min="10" max="300" step="0.1" placeholder="e.g., 70.5" required>
+                        </div>
+                        <!-- You can add more medical related fields here if needed -->
+                        <div class="form-group">
+                            <label for="signupPassword">Password:</label>
+                            <input type="password" id="signupPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupConfirmPassword">Confirm Password:</label>
+                            <input type="password" id="signupConfirmPassword" required>
+                        </div>
+                        <button type="submit"  class="btn btn-primary">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>AyurJeev</h3>
+                    </div>
+                    <p>Empowering rural health through AI-powered solutions. Bridging the gap between technology and healthcare accessibility.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="telemedicine.html">Telemedicine</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="image-identifier.html">Image Identifier</a></li>
+                        <li><a href="health-education.html">Health Education</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">AI Diagnosis</a></li>
+                        <li><a href="#">Remote Consultation</a></li>
+                        <li><a href="#">Health Monitoring</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                        <li><a href="#">Preventive Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 123 456 7890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@ayurjeev.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rural Healthcare Hub, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="disclaimer">
+                    <p><strong>Important Disclaimer:</strong> AyurJeev provides information and suggestions based on AI analysis. It is not a substitute for professional medical diagnosis, treatment, or advice from a qualified healthcare provider. Always consult healthcare professionals for medical concerns.</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 AyurJeev. All rights reserved. | Empowering rural health through technology.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="auth.js"></script> 
+    <script type="module" src="login_signin.js"></script> 
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_1a225f55596f5b34b5f1fbd49d61f5ff3'
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+/* General styling carried over from styles.css or similar */
+/* Ensure you have a base styles.css for common elements like body, container, header, nav, footer, btn */
+
+.profile-main {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+}
+
+.profile-card h2 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.profile-card h2 i {
+    font-size: 1.2em;
+    color: #28a745;
+}
+
+.profile-info-item {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #444;
+}
+
+.profile-info-item strong {
+    color: #2c3e50;
+    display: inline-block;
+    width: 150px; /* Adjust as needed for alignment */
+    flex-shrink: 0;
+}
+
+#profile-details {
+    margin-top: 20px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none; /* Hidden by default, shown by JS */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error-message {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Session History Styling */
+#session-history ul {
+    list-style: none;
+    padding: 0;
+}
+
+#session-history li {
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-size: 1em;
+    color: #555;
+}
+
+#session-history li i {
+    color: #007bff;
+    font-size: 1.2em;
+    flex-shrink: 0;
+}
+
+#session-history li span {
+    flex-grow: 1;
+}
+
+/* Nav bar profile button */
+.profile-button {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Make it round */
+    width: 40px; /* Size of the button */
+    height: 40px; /* Size of the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em; /* Icon size */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 15px; /* Space from other nav items */
+    position: relative; /* For the initial text if needed */
+    overflow: hidden; /* Hide overflow for initial text */
+}
+
+.profile-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.profile-button .profile-initial {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+.profile-button .fa-user-circle {
+    font-size: 1.6em; /* Adjust if the icon is too small */
+    color: white;
+    position: absolute;
+}
+
+/* Hide initial and show icon, or vice-versa, depending on preference */
+/* For now, let's keep the user icon always */
+.profile-button .profile-initial { display: none; } /* Hide initial, show icon */
+.profile-button.active-profile { background-color: #0056b3; } /* Highlight if on profile page */
+
+
+.nav-logout-btn { /* This class is now unused in main nav, but kept for clarity */
+    /* Styles for the logout button in the nav bar */
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 20px;
+    margin-left: 10px; /* Space between profile icon and logout */
+}
+
+/* New: Logout button specific to profile page */
+.logout-button {
+    margin-top: 25px; /* Space from profile details */
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 30px;
+    background-color: #e74c3c; /* Red color for logout */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex; /* For icon and text alignment */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto; /* Allow button to size based on content */
+    margin-left: auto; /* Push to right */
+    margin-right: auto; /* Center if width is 100% */
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+
+/* Responsive adjustments for profile page */
+@media (max-width: 768px) {
+    .profile-main {
+        padding: 20px 0;
+    }
+    .profile-card {
+        padding: 20px;
+    }
+    .profile-card h2 {
+        font-size: 1.5em;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+    .profile-info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+    .profile-info-item strong {
+        width: auto;
+        margin-bottom: 5px;
+    }
+    .profile-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+        margin-right: 10px;
+    }
+    .nav-logout-btn {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+    .logout-button {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 15px;
+    }
+    .profile-card h2 {
+        font-size: 1.3em;
+    }
+    .profile-info-item {
+        font-size: 0.95em;
+    }
+    #session-history li {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
