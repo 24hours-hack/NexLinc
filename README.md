@@ -1,6 +1,6 @@
 # 🏥 NexLinc – AI-Powered Multilingual Health Assistance Platform
 
-![BYTE BATTLE Hackathon Banner](https://24hours-hack.github.io/NexLinc/banner.ppg) 
+![BYTE BATTLE Hackathon Banner](https://24hours-hack.github.io/NexLinc/banner.jng) 
 
 > 🥈 **2nd Place Winner – BYTE BATTLE Hackathon (June 13–14, 2025)**  
 > 🚀 Built in 24 hours by Team **Code Definers** at VTU Campus, Belagavi  
