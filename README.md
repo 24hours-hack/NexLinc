@@ -44,7 +44,7 @@ This project was built during the **BYTE BATTLE Hackathon**, organized by Nexlin
 ## 🚀 Live Demo
 
 🌐 **Website:** [https://24hours-hack.github.io/NexLinc/](https://24hours-hack.github.io/NexLinc/)  
-🎥 **Demo Video:** [Code_Definers_Demo.mp4](#) *(Add video link once uploaded to YouTube or Drive)*
+🎥 **Demo Video:** [Code_Definers_Demo.mp4](https://drive.google.com/file/d/1FIy41pbHntxouIuXEnnzRN1J4IdefecL/view?usp=drive_link).
 
 ---
 
@@ -84,9 +84,6 @@ This project was built during the **BYTE BATTLE Hackathon**, organized by Nexlin
 git clone https://github.com/24hours-hack/NexLinc.git
 Run backend (Python Flask):
 
-bash
-Copy
-Edit
 cd backend
 pip install -r requirements.txt
 python app.py
