@@ -44,7 +44,7 @@ This project was built during the **BYTE BATTLE Hackathon**, organized by Nexlin
 ## 🚀 Live Demo
 
 🌐 **Website:** [https://24hours-hack.github.io/NexLinc/](https://24hours-hack.github.io/NexLinc/)  
-🎥 **Demo Video:** [Code_Definers_Demo.mp4](https://drive.google.com/file/d/1FIy41pbHntxouIuXEnnzRN1J4IdefecL/view?usp=drive_link).
+🎥 **Demo Video:** [https://drive.google.com/file/d/1FIy41pbHntxouIuXEnnzRN1J4IdefecL/view?usp=drive_link](https://drive.google.com/file/d/1FIy41pbHntxouIuXEnnzRN1J4IdefecL/view?usp=drive_link)
 
 ---
 
