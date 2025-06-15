@@ -1,4 +1,4 @@
-# 🏥 NexLinc – AI-Powered Multilingual Health Assistance Platform
+# 🏥 AayurJeev – AI-Powered Multilingual Health Assistance Platform
 
 ![BYTE BATTLE Hackathon Banner](https://24hours-hack.github.io/NexLinc/banner.jpg) 
 
