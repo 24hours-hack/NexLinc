@@ -10,7 +10,7 @@
 
 ## 📌 About the Project
 
-**NexLinc** is a beginner-friendly, AI-powered web platform developed to assist users with real-time medical insights. It features symptom checking, machine learning-based disease prediction, and multilingual accessibility – all tailored for rural and regional users.
+**AayurJeev** is a beginner-friendly, AI-powered web platform developed to assist users with real-time medical insights. It features symptom checking, machine learning-based disease prediction, and multilingual accessibility – all tailored for rural and regional users.
 
 This project was built during the **BYTE BATTLE Hackathon**, organized by Nexlinc and powered by **VTU’s Visvesvaraya Research & Innovation Foundation (VRIF)**.
 
