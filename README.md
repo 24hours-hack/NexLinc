@@ -69,7 +69,6 @@ This project was built during the **BYTE BATTLE Hackathon**, organized by Nexlin
 2. They select symptoms from a simple UI or upload relevant info/images.
 3. The system:
    - Uses **Gemini API** for smart advice,
-   - Runs inputs through a **TensorFlow model** for predictions,
    - Translates results in real-time using **Weglot API**.
 4. Output is shown in the selected language with actionable insights.
 
