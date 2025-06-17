@@ -22,7 +22,6 @@ This project was built during the **BYTE BATTLE Hackathon**, organized by Nexlin
 |-------------|----------------------------------------------|
 | Frontend    | HTML, CSS, JavaScript                        |
 | Backend     | Python (Flask)                               |
-| Machine Learning | TensorFlow (custom-trained models)     |
 | Translation | Weglot API                                   |
 | AI Responses| Gemini API (Google Generative AI)           |
 | Auth & DB   | Firebase Authentication & Firestore         |
@@ -36,7 +35,6 @@ This project was built during the **BYTE BATTLE Hackathon**, organized by Nexlin
 - 🧠 Gemini API integration for intelligent recommendations
 - 🔐 Firebase email registration & authentication
 - 📱 Responsive and interactive UI/UX
-- ⚙️ TensorFlow model for basic condition prediction
 - 🕒 Built in just 24 hours during the hackathon!
 
 ---
